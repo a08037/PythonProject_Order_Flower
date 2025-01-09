@@ -1,0 +1,36 @@
+# Игнорирование среды Python и временных файлов
+*.pyc
+*.pyo
+__pycache__/
+*.log
+*.sqlite3
+db.sqlite3
+
+# Игнорирование конфигурационных файлов
+.env
+config.py
+
+# Игнорирование виртуальной среды
+venv/
+env/
+
+# Статические файлы
+/static/
+media/
+
+# Секретные ключи и токены
+config.py
+
+# Игнорирование настроек IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Игнорирование кеша
+*.cache
+*.pid
+
+# Файлы миграций
+*/migrations/*.py
+*/migrations/*.pyc
