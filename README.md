@@ -65,9 +65,9 @@ pip install -r requirements.txt
 Создайте файл config.py в корне проекта и добавьте свои API ключи:
 python
 Копировать код
-TOKEN = 'your-telegram-bot-token'
-WEATHER_API_KEY = 'your-weather-api-key'
-THE_CAT_API_KEY = 'your-cat-api-key'
+TELEGRAM_BOT_TOKEN = 'your-telegram-bot-token'
+TELEGRAM_CHAT_ID = ''
+SECRET_KEY=''
 
 ### 5. Миграции базы данных:
 bash
