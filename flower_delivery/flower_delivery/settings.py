@@ -12,7 +12,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'default_secret_key')
 DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 
 # Разрешенные хосты
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -76,15 +79,14 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-SITE_URL = 'https://7dd5-94-30-209-45.ngrok-free.app'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SITE_URL = "http://127.0.0.1:8000"
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Токен для Telegram-бота и chat_id для отправки уведомлений
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', '')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID', '')
