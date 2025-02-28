@@ -6,4 +6,3 @@ from .models import Order
 def order_post_save(sender, instance, created, **kwargs):
     if created:
         instance.send_to_telegram()  # Отправка сообщения в Telegram
-
